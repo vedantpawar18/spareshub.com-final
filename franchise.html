@@ -1,0 +1,535 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{font-family: "Open Sans";     font-size: 13px;}
+
+        #box1{background-color: #083454;
+            height:850px;
+        }
+        #box2{background-color: #083454;
+            height:800px;
+        }
+        #box2>div{
+            height: 500px;  width: 80%;
+            margin: auto;
+            margin-top: 70px;
+            display: grid;
+            grid-template-columns: auto auto;
+            gap:40px;
+        }
+       
+        #q1{
+            padding: 50px 0px 0px 170px;
+            height:90px;            width:280px;
+        }
+
+        #you{display: grid;
+            grid-template-columns: 800px 600px;
+            height: 600px;
+            /* border: yellow solid; */
+            margin-top: 30px;
+          }
+              
+        #q2{display: flex;
+            flex-direction: column;
+            align-items: center;
+            color: white;
+        }
+
+        #q2>p:nth-child(1){
+            font-size: 72px; font-style: normal; font-variant: normal; font-weight: 700; line-height: 79px;
+            text-align: center;
+        }
+
+        #q2>p:nth-child(2){
+            font-size: 20px; font-style: normal; font-variant: normal; font-weight: 400; line-height: 28px;
+            text-align: center;
+            width: 65%;
+        }
+
+        button{
+            font-size: 19px; font-style: normal; font-variant: normal; font-weight: 400; line-height: 27px;
+            color: white;
+            padding: 10px 10px 10px 10px;
+            text-align: center;
+            height: 60px; 
+            border: 0px;
+        }
+
+        .b1>button{
+        width: 280px;
+        background-color: #784882;
+       }
+
+        .b1>button:hover { background-color: #68417f; }
+        
+        .b1>div{
+            height: 10px;
+            width: 280px;
+            background-color: #5b3d61;
+        }
+        
+        .b2>button{
+            width: 250px;
+            background-color: #9cc138;
+            margin-top: 10px;
+        }
+
+        .b2>button:hover{   background-color: #79a328;  }
+
+        .b2>div{
+            height: 10px;
+            width: 250px;
+            background-color: #6c8135;
+        }
+
+        #img1{
+            height:650px;
+            width:610px; 
+            margin-left: 10px;
+        }
+        .k0{font-size: 38px; font-style: normal; font-variant: normal; font-weight: 500; line-height: 65px;
+            text-align: center;
+        }
+        .k1{  color: #393636;            padding-top: 70px;       }
+        .k2{  color: white;            padding-top: 60px;        }
+
+        #lastbox{
+            display:grid;
+            grid-template-columns: repeat(3,300px);
+            grid-template-rows: auto;
+            gap: 40px 180px;
+            height: 500px;      width: 83%;
+            margin: auto;   margin-top: 150px;
+            /* border: red solid; */
+        }
+        #lastbox>div{
+            /* border: green solid; */
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: flex-start;
+            }
+        #lastbox>div:nth-child(1)>p{
+            width:200px;
+        }
+        #lastbox>div>p{margin-bottom: -10px;}
+        #para1{
+            font-family: "PT Sans"; 
+            font-size: 22px; font-style: normal; font-variant: normal; font-weight: 400; line-height: 24px;  
+            color: #083454;   
+            text-align: center;
+            width:240px;
+        }
+        #para2{
+            font-size: 13px; font-style: normal; font-variant: normal; font-weight: 400; line-height: 18px; 
+            color: #777777;
+        }
+        #smallimage{
+            height:80x; width:80px;
+        }
+        #video1{
+            margin:auto;
+            margin-top: 100px;
+            height:500px; width:1000px;
+            
+        }
+       
+        #go{
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            
+        }
+        #go>div{display: flex;
+        align-items: center;
+    
+}
+    /* -------------------------------------------------------------------------- */
+        #jk{
+            font-size: 21px; font-style: normal; font-variant: normal; font-weight: 100; line-height: 29px; 
+            color: white;
+        }
+        #jk1{
+            font-size: 24px; font-style: normal; font-variant: normal; font-weight: 400; line-height: 34px; 
+            color: #34e4a2;
+        }
+        #jk2{
+            font-size: 20px; font-style: normal; font-variant: normal; font-weight: 100; line-height: 28px; 
+            color: white;
+            margin-top: -10px;
+        }
+        #mar{
+            margin: 50px 0px 0px 210px;
+        }
+        #pop{
+            height: 800px;  width: 80%;
+            margin: 120px 0px 0px 180px;
+            display: grid;
+            grid-template-columns: 400px 600px;
+            gap: 200px;            
+        }
+        #pop>div:first-child{
+            display: grid;
+            grid-template-rows: 100px auto;
+            gap:20px;
+        }
+        #u1{
+            width:100%;
+        }
+        #he{
+            display: grid;
+            grid-template-rows: 150px auto;
+            
+        }
+        .flip{
+            font-size: 21px; font-style: normal; font-variant: normal; font-weight: 400; line-height: 29px; 
+            color: #777777;
+        }
+        li{margin-bottom: 10px;}
+        #paro{margin-top: 250px;
+            background-color: #083454;
+            height:600px;
+        }
+        #bloop{
+            display: grid;
+            grid-template-columns: auto auto auto;
+        }
+        #g1{display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        #g2{
+            display: grid;
+            grid-template-columns: 50% 20%;
+            gap:10%;
+        }
+        #pk{display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        #pk>p:nth-child(2n+1)
+        {
+            font-size: 19px; font-style: normal; font-variant: normal; font-weight: 400; line-height: 27px; 
+            color: #4f4b4b;
+        }
+        #pk>img{            width:120px;        }
+        #pk>p:first-child
+        {
+            font-size: 19px; font-style: normal; font-variant: normal; font-weight: 400; line-height: 27px; 
+            color: #0088cc;
+        }
+        #pk>p:first-child:hover{
+            color: #393636;
+            cursor:pointer;
+        }
+        #pk>p:nth-child(2n)
+        {
+            font-size: 36px; font-style: normal; font-variant: normal; font-weight: 600; line-height: 50px; 
+            color: #393636;
+            margin-top: -10px;
+        }
+        #fin>div{
+            width:500px;
+        }
+        .b3{margin-left:80px;}
+
+        @media only screen and (min-width: 421px) and (max-width: 780px) {
+            #q1{
+            padding: 20px 0px 0px 10px;
+            height:150px;            width:400px;
+        }
+            #box1{
+                /* border: red solid; */
+                height: 1100px;                width:90%;
+                margin-left: 50px;
+                padding: 0px 50px 0px 50px ;
+            }
+            #you{ grid-template-columns: 50% 50%;    }
+            #img1{height:200px;  width:200px; 
+            margin-left: 10px;
+        }
+        button{            height: 40px;         }
+        .k0{font-size: 25px; line-height: 43px;        }
+            #lastbox{
+            grid-template-columns: repeat(2,1fr);
+            grid-template-rows: auto;
+            height: 700px;      
+            gap: 5px 5px;
+            text-align: center;
+            margin-top: 20px 0px 0px 70px;
+            width: 100%;
+            }
+            
+        #g2{
+            grid-template-columns: repeat(1,1fr);
+            grid-template-rows: 50% 20%;
+            gap:1%;
+        }
+        #bloop{
+            display: grid;
+            grid-template-columns: repeat(1,1fr);
+            grid-template-rows: auto;
+        }
+        #paro{
+            height: 1150px; width:550px;
+        }
+        #he{
+            grid-template-rows: 150px auto;
+            
+        }
+        #pop{
+            height: 1400px;  width: 70%;
+            grid-template-columns: repeat(1,1fr);
+            grid-template-rows: 750px 400px;
+            margin: auto;
+        }
+        #u1{
+            width: 500px;
+        }
+        #box2{
+            height:1000px;
+            /* margin-left: 100px; */
+        }
+        #box2>div{
+            height: 800px; width: 400px;
+            grid-template-columns: repeat(1,1fr);
+            grid-template-rows: auto auto;
+        }
+        iframe{
+            position:relative;
+            width: 300px;
+            height: auto;
+        }
+        #video1{
+            width:300px;
+            height: auto;
+            margin: auto;
+        }
+            }
+
+      @media only screen and (min-width: 70px) and (max-width: 420px) {
+        
+            #box1{
+                border: red solid;
+                height: 1300px;                width:700px;
+            }
+            #you{ grid-template-columns: repeat(1,1fr);    }
+            #img1{height:500px;  width:500px; 
+            margin-left: 100px;
+        }
+        
+        .k0{font-size: 25px; line-height: 43px;       }
+            #lastbox{
+            grid-template-columns: repeat(1,1fr);
+            grid-template-rows: auto;
+            height: 2000px;      width: 500px;
+            gap: 40px 40px;
+            text-align: center;
+            margin-top: 20px;
+            }
+            
+        #g2{
+            grid-template-columns: repeat(1,1fr);
+            grid-template-rows: 50% 20%;
+            gap:1%;
+        }
+        #bloop{
+            display: grid;
+            grid-template-columns: repeat(1,1fr);
+            grid-template-rows: auto;
+        }
+        #paro{
+            height: 1150px; width:550px;
+        }
+        #he{
+            grid-template-rows: 150px auto;
+            
+        }
+        #pop{
+            height: 1400px;  width: 70%;
+            grid-template-columns: repeat(1,1fr);
+            grid-template-rows: 750px 400px;
+            margin: auto;
+        }
+       
+        #box2{
+            height:1000px;
+            width: 600px;
+        }
+        #box2>div{
+            height: 800px; width: 400px;
+            grid-template-columns: repeat(1,1fr);
+            grid-template-rows: auto auto;
+        }
+        #video1{
+            width:100px;
+            height: 100px;
+            margin-bottom: 100px;
+            }
+        iframe{
+            position:relative;
+            width: 250px;
+            height: auto;
+        }
+        }
+
+
+</style>
+</head>
+<body>
+    <div id="box1">
+        <img id="q1" src="data:image/webp;base64,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" alt="">
+        <div id="you">
+            <div id="q2">
+                <p>Start Your Car Parts Store</p>
+                <p>Start your new business in partnership with SparesHub and see your business become successful</p>
+                <div class="b1"><button >SUBMT APPLICATION</button>
+                <div></div>
+                </div>
+                <div class="b2"><button>BOOK FRANCHISE</button>
+                <div></div>
+                </div>
+            </div>
+            <div><img src="https://spareshub.com/pub/media/wysiwyg/xstore_front_design2.png.pagespeed.ic.GKeaSW-NOH.webp" alt="" id="img1">
+            </div>
+        </div>
+    </div>
+    <p class="k1 k0">BENEFITS OF SPARESHUB FRANCHISE</p>
+
+    <div id="lastbox"></div>
+
+    <p class="k1 k0">WATCH THE VIDEO FOR DETAILS</p>
+
+    <div id="video1">
+       <iframe width="1000" height="500" src="https://www.youtube.com/embed/FjWuytBqMfs" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+    </div>
+    <div id="box2">
+        <p class="k0 k2">ABOUT SPARESHUB COMPANY</p>
+        <div>
+            <div id="fin">
+                <div id="go"></div>
+                <div class="b1 b3" style="margin-top:  40px;"><button >SUBMT APPLICATION</button>
+                    <div></div>
+                </div>
+                <div class="b2 b3"><button>BOOK FRANCHISE</button>
+                    <div></div>
+                </div>
+            </div>    
+            <div><img src="https://spareshub.com/pub/media/wysiwyg/xoutput-onlinepngtools_3_.png.pagespeed.ic.A5OhZC2Pu8.webp" alt=""></div>
+        </div>
+        
+        
+    </div>
+    <p class="k1 k0">EXISTING SPARESHUB FRANCHISE NETWORK</p>
+    <div id="pop">
+        <div id="pop1"></div>
+        <div><img src="https://spareshub.com/pub/media/wysiwyg/xnewmap.jpeg.pagespeed.ic.jO5irm_Di_.webp" alt="" id="u1"></div>
+    </div>
+    <div id="paro">
+        <p class="k2 k0">ELIGIBILITY & INVESTMENT REQUIRED</p>
+        <div id="bloop"></div>
+    </div>
+    <p class="k1 k0">FOR MORE INFORMATION</p>
+    <div id="g2">
+        <div id="pk">
+            <p>Download Franchise Broucher</p>
+            <img src="https://spareshub.com/pub/media/wysiwyg/xinfo_download.jpg.pagespeed.ic.GrjXu4nOz1.webp" alt="">
+            <p>Call Us</p>
+            <p>+919307901479</p>
+            <p>Write</p>
+            <p>franchise@spareshub.com</p>
+            <div class="b1" style="margin: 40px 0px 0px 40px;"><button >SUBMT APPLICATION</button>
+            <div></div>
+            </div>
+        </div>
+        <div><img src="https://spareshub.com/pub/media/wysiwyg/xezgif.com-gif-maker.png.pagespeed.ic.M_X5ly0K1Z.webp" alt=""></div>
+    </div>
+</div>
+</body>
+</html>
+<script>
+        t=[
+            {i:"https://spareshub.com/pub/media/wysiwyg/xfullrange.png.pagespeed.ic.C_WlQnwFPT.webp", p1:"Full Range of Car Parts", p2:"80+ Brands of car parts from OEM & OES",},
+            {i:"https://spareshub.com/pub/media/wysiwyg/xsoftwareelectronic.png.pagespeed.ic.FcbPTF0r_u.webp", p1:"Softwares & Electronic Parts Catalog", p2:"To manage your business efficiently",},
+            {i:"https://spareshub.com/pub/media/wysiwyg/xexpertinventory.png.pagespeed.ic.FcbPTF0r_u.webp",p1:"Expert Inventory Planning",p2:"We advise you which parts to stock",},
+            {i:"https://spareshub.com/pub/media/wysiwyg/xbrandedstore.png.pagespeed.ic.LDDgpZr1fb.webp",p1:"SparesHub.com Branded Store",p2:"Leverage the power of our National Brand",},
+            {i:"https://www.kindpng.com/picc/m/332-3321467_graduate-hat-icon-graduation-cap-logo-png-transparent.png",p1:"Comprehensive Training",p2:"For Franchise Partners & their Employees",},
+            {i:"https://spareshub.com/pub/media/wysiwyg/xmarketingsupport.png.pagespeed.ic.M2ZnUDz9_R.webp",p1:"Marketing Support & Merchandise", p2:"We will provide Marketing Material",}
+        ];
+       t.map(function(e){
+        l1=document.createElement("div");
+        l2=document.createElement("img");
+        l2.src=e.i;
+        l2.setAttribute("id","smallimage");
+        l3=document.createElement("p");
+        l3.innerText=e.p1;
+        l3.setAttribute("id","para1");
+        l4=document.createElement("h4");
+        l4.setAttribute("id","para2");
+        l4.innerText=e.p2;
+        l1.append(l2,l3,l4);
+        document.querySelector("#lastbox").append(l1);
+       });
+
+       u=["8+ Years Industry Experience","100+ Suppliers Relationships","600+ Workshop Customers","3 Warehouses Across India","100+ SparesHub Franchise Stores"];
+       u.map(function(e)
+       {n0=document.createElement("div");
+       n0.style.width="100%"; n0.style.height="50px";
+       n1=document.createElement("img");
+       n1.src="https://spareshub.com/pub/media/wysiwyg/xulli.png.pagespeed.ic.RgamavjuWk.webp";
+       n1.style.width="50px"; n1.style.height="50px"; 
+        n2=document.createElement("p");
+       n2.innerText=e;
+       n3=document.createElement("div");
+       n3.style.width="15px";
+       n2.setAttribute("id","jk");
+       n0.append(n1,n3,n2);
+       document.querySelector("#go").append(n0);
+       });
+
+       r=["Maharashtra","Madhya Pradesh","Gujarat","Telangana","Andhra Pradesh","Karnataka","Uttan Pradesh","Haryana","Manipur","Tripura","Mizoram","Assam","Goa","Meghalaya","Jammu & kashmir","Uttar pradesh","Odisha","kerala"];
+       w1=document.createElement("div");
+       w1.setAttribute("id","he");
+       w2=document.createElement("div");
+       w21=document.createElement("p");
+       w21.innerText="Total Count -100+ Franchises";
+       w21.setAttribute("class","flip");
+       w22=document.createElement("p");
+       w22.innerText="States Present";
+       w22.setAttribute("class","flip");
+       w2.append(w21,w22);
+       w3=document.createElement("div");
+       w1.append(w2,w3);
+       w4=document.createElement("ul");
+       r.map(function(e)
+       {w5=document.createElement("li");
+       w5.innerText=e;
+       w5.setAttribute("class","flip");
+       w4.append(w5);
+       w3.append(w4);
+       document.querySelector("#pop1").append(w1);
+       });
+       
+       f=[{u1:"https://static.wixstatic.com/media/e4f166_52912a641402475f915076c0f2ca1b99~mv2.png/v1/fill/w_220,h_220,al_c,q_85,usm_0.66_1.00_0.01/e4f166_52912a641402475f915076c0f2ca1b99~mv2.webp",u2:"Rs. 5 Lakhs Parts Inventory",u3:"This would cover the fast selling parts at your store"},{u1:"https://static.wixstatic.com/media/e4f166_64b6a2ca097e43f1bcaadea26f181ca5~mv2.png/v1/fill/w_220,h_220,al_c,q_85,usm_0.66_1.00_0.01/e4f166_64b6a2ca097e43f1bcaadea26f181ca5~mv2.webp",u2:"Rs. 100000 Franchise Fees",u3:"For 5 Year Franchise Term"},{u1:"https://static.wixstatic.com/media/e4f166_b89d3dc3e7f8494dac6b85a719d0e511~mv2.png/v1/fill/w_220,h_220,al_c,q_85,usm_0.66_1.00_0.01/e4f166_b89d3dc3e7f8494dac6b85a719d0e511~mv2.webp",u2:"300 sq.ft. Retail Space",u3:"Own or Rented shop space for franchise store"}];
+       f.map(function(e){
+        f1=document.createElement("div");
+        f1.setAttribute("id","g1");
+        f2=document.createElement("img");
+        f2.src=e.u1;
+        f3=document.createElement("p");
+        f3.innerText=e.u2;
+        f3.setAttribute("id","jk1");
+        f4=document.createElement("p");
+        f4.innerText=e.u3;
+        f4.setAttribute("id","jk2");
+        f1.append(f2,f3,f4);
+        document.querySelector("#bloop").append(f1);
+       });
+  
+</script>
