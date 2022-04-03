@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script
+      src="https://kit.fontawesome.com/24c494a6b6.js"
+      crossorigin="anonymous"
+    ></script>
+    <style>
+        #map {
+            border: 1px solid black;
+            height: 300px;
+            width: 80%;
+            margin: auto;
+            margin-top: 100px;
+        }
+        img {
+            width: 100%;
+            height: 100%;
+        }
+        #container {
+            border: none;
+            height: 350px;
+            width: 80%;
+            margin: auto;
+            margin-top: 20px;
+            display: grid;
+           grid-template-columns: repeat(3,1fr);
+           grid-auto-rows: auto;
+        } 
+        #container > div {
+          border: none;
+          
+        }
+         #write {
+             font-size: 25px;
+             color: #969494;
+             margin-left: 140px;
+             margin-top: 2px;
+           
+         }
+         span {
+             color: #504e4e;
+         }
+         p {
+           color: #7c7777;
+           line-height: 8px;
+         }
+         .redstar {
+             color: red;
+         }
+        #name {
+            height: 30px;
+            width: 90%;
+            border-radius: 5px;
+            border: 1px solid grey;
+            outline-color: #a2c8da;
+            
+        }
+        #mail {
+            height: 30px;
+            width: 90%;
+            border-radius: 5px;
+            border: 1px solid grey;
+            outline-color: #a2c8da;
+        }
+        #mobile {
+            height: 30px;
+            width: 90%;
+            border-radius: 5px;
+            border: 1px solid grey;
+            outline-color: #a2c8da;
+        }
+        #submit {
+          height: 30px; 
+          padding: 5px;
+          width: 20%;
+          border-radius: 3px;
+          background-color: #048acd;
+          border: none;
+          color: aliceblue;
+        }
+        #box1 {
+            padding-left: 30px;
+        }
+        #userfeedback {
+            height: 200px;
+            width: 90%;
+            border: 1px solid grey;
+            border-radius: 5px;    
+            outline-color: #a2c8da;
+        }
+        #box3 {
+        display: grid;
+        grid-template-columns: repeat(1,1fr);
+        grid-template-rows:auto;
+        gap: 2px;
+        
+        }
+        #box3>div {
+            border: none;
+        }
+        .icons {
+          
+            height: 50%;
+            width: 20%;
+           text-align: center;
+           padding-top: 20px;
+           border-radius: 8px;
+           background-color: #0088cc;
+           color: white;
+           margin-right: 15px;
+        }
+        .innerbox {
+            display: flex;
+            border: 1px solid black;   
+        }
+        .blue {
+            color: #048acd;
+        }
+       .contact {
+          margin-left: 650px;
+          color: #969494;
+       }
+    </style>
+</head>
+<body>
+    <div id="map">
+     <img src="https://i.stack.imgur.com/HILmr.png" alt="">
+    </div>
+
+    <p id="write">write <span>us</span> <span class="contact">Contact <span>Details</span></span></p>
+
+    <div id="container">
+       <div id="box1">
+           <form id="form" action="">
+               <p>Name <span class="redstar">*</span></p>
+              <input id="name" type="text"> 
+              <p>Email <span class="redstar">*</span></p>
+              <input id="mail" type="email">
+              <p>Phone Number</p>
+              <input id="mobile" type="number">
+              <br>
+              <input id="submit" type="submit">
+           </form>
+       </div>
+
+       <div id="box2">
+           <p>Whats on your mind? <span class="redstar">*</span></p>
+           <input id="userfeedback" type="text">
+       </div>
+        
+       <div id="box3">
+          <div class="innerbox">
+            <div class="icons">
+                <i class="fa-solid fa-phone"></i>
+            </div>
+            <div>
+               <p>020-67123030</p> 
+               <p>91 7030917154</p>
+            </div>
+          </div>
+
+          <div class="innerbox">
+            <div class="icons">
+                <i class="fa-solid fa-envelope"></i>
+            </div>  
+            <div>
+                <p>contact@spareshub.com</p>
+                <p>Mail Us</p>
+            </div>  
+          </div>
+
+          <div class="innerbox">
+            <div class="icons">
+                <i class="fa-brands fa-twitter"></i>
+            </div>
+            <div>
+                <p class="blue">Spareshub_twitter</p>
+                <p>Follow Infortis on Twitter</p>
+            </div>
+          </div>
+
+          <div class="innerbox">
+            <div class="icons">
+                <i class="fa-brands fa-facebook-f"></i>
+            </div>
+            <div>
+                <p class="blue"> Spareshub_facebook</p>
+                <p>Join us on Facebook</p>
+            </div>
+          </div>
+
+          <div class="innerbox">
+            <div class="icons">
+            </div>
+            <div>
+                <p class="blue"> Linked in</p>
+                <p> Linked in</p>
+                <div></div>
+            </div>
+          </div>
+       </div>
+
+    </div>
+</body>
+</html>
