@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .remove-btn-v:hover{
+            background-color: rgb(138, 138, 243);
+        color: white;
+        }
+    </style>
+  
+
+</head>
+<body>
+    <h1>Add to cart  </h1>
+    <div id="container"></div>
+</body>
+</html>
+<script>
+    
+    var data=JSON.parse(localStorage.getItem("cart"));
+
+
+    data.map(function(elem,index){
+        var box=document.createElement("div");
+
+        var image=document.createElement("img")
+        image.src=elem.image_url;
+        image.style.width="244px"
+
+        var name=document.createElement("p");
+        name.innerText=elem.name;
+
+        var eprice=document.createElement("p");
+        eprice.innerText="₹"+elem.price+".00";
+      
+
+       
+
+        var btn=document.createElement("button");
+        btn.innerText="Remove item";
+        btn.setAttribute("class","remove-btn-v")
+        btn.addEventListener("click",function(){
+            removeitm(elem,index);
+           
+        });
+
+        box.append(image,name,eprice,btn);
+        document.querySelector("#container").append(box);
+    });
+
+    
+    function removeitm(elem,index)
+    {
+        console.log(elem,index);
+        data.splice(index,1);
+        localStorage.setItem("cart",JSON.stringify(data));
+         window.location.reload();
+    }
+
+</script>
