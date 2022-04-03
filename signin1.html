@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #p1 {
+         font-size: 20px;  
+         color: #0088cc;
+         margin-left: 140px;
+         margin-bottom: -80px;
+         
+        }
+        #signin {
+            height: 30px;
+            display: flex;
+            margin-top: 50px;    
+        }
+        #facebook{
+           background-color: #3b5998;
+           color: white;
+           padding: 8px;
+           border-radius: 5px;
+           border: none;
+           margin-top: 90px;
+           margin-left: 150px;
+         }
+         #google {
+           background-color: #dd4b39;
+           color: white;
+           padding: 8px;
+           border-radius: 5px;
+           border: none;
+           margin-top: 90px;
+           margin-left: 5px;
+         }
+         #container {
+            box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+            border-top: 5px solid #0088cc;
+            height: 350px;
+            width: 80%;
+            margin: auto;
+            margin-top: 100px ;
+            display: grid;
+            grid-template-columns: repeat(2,1fr);
+            grid-template-rows: auto;
+            gap: 10px;
+            border-radius: 10px;
+        }
+        #container>div {
+            border: none;
+        }
+        .blue {
+            color: #0088cc;
+            margin-left: 30px;
+        }
+        .redstar {
+            color: red;
+        }
+        #firstName {
+         height: 30px ;
+         width: 90%;
+         outline-color: #8cb3dd;
+         border-radius: 5px;
+         border: 1px solid rgb(187, 183, 183);
+         margin-left: 30px;
+        }
+        #lastName {
+         height: 30px ;
+         width: 90%;
+         outline-color: #8cb3dd;
+         border-radius: 5px;
+         border: 1px solid rgb(187, 183, 183);
+         margin-left: 30px;
+        }
+        #mail {
+         height: 30px ;
+         width: 90%;
+         outline-color: #8cb3dd;
+         border-radius: 5px;
+         border: 1px solid rgb(187, 183, 183);
+        }
+        #password {
+         height: 30px ;
+         width: 90%;
+         outline-color: #8cb3dd;
+         border-radius: 5px;
+         border: 1px solid rgb(187, 183, 183);
+        }
+        #confirmpass {
+        height: 30px ;
+         width: 90%;
+         outline-color: #8cb3dd;
+         border-radius: 5px;
+         border: 1px solid rgb(187, 183, 183);
+        }
+        button {
+            padding: 10px;
+             background-color: #0088cc;
+             border: none;
+             color: white;
+            margin-top: 80px;
+            margin-left: 30px;
+        }
+        .p2 {
+            margin-left: 30px;
+             color: #877f83; ;
+        }
+        p {
+            color: #877f83;
+        }
+    </style>
+</head>
+<body>
+    <p id="p1">Create New Customer Account</p>
+    <div id="signin">
+        <div ><button id="facebook"> <i id="icon" class="fa-brands fa-facebook-square"></i>Sign in With Facebook</button></div>
+        <div ><button id="google"><i class="fa-brands fa-google"></i> Sign in With Google</button></div>
+    </div>
+    <div id="container">
+
+       <div>
+           <p class="blue">PERSONAL INFORMATION</p>
+           <form action="">
+               <p class="p2">First Names <span class="redstar" >*</span></p>
+               <input id="firstName" type="text">
+               <p class="p2">Last Name <span class="redstar">*</span></p>
+               <input id="lastName" type="text">
+               <button type="submit">Create an Account</button>
+               <!-- <input type="submit"> -->
+           </form>
+       </div>
+       
+       <div>
+            <p class="blue">SIGN-IN INFORMATION</p>
+            <p>Email <span class="redstar">*</span></p> 
+            <input id="mail" type="email">
+            <p>Password <span class="redstar">*</span></p>
+             <input id=password type="password">
+             <p>Password Strength: No Password</p>
+             <p>Confirm Password <span class="redstar">*</span></p>
+             <input id="confirmpass" type="password">
+       </div>
+
+    </div>
+</body>
+</html>
+
+<script>
+    document.querySelector("form").addEventListener("submit", myFun)
+    function myFun(){
+        var sparesArr = JSON.parse(localStorage.getItem("userCred")) || []
+        event.preventDefault()
+        var sparesObj = {
+          firstName : document.querySelector("#firstName").value,
+          lastName : document.querySelector("#lastName").value,
+          email : document.querySelector("#mail").value,
+          password : document.querySelector("#password").value,
+          confirmPass : document.querySelector("#confirmpass").value,
+        }
+        sparesArr.push(sparesObj)
+        console.log(sparesArr)
+        localStorage.setItem("userCred", JSON.stringify(sparesArr))
+        document.querySelector("#firstName").value= ""
+        document.querySelector("#lastName").value= ""
+        document.querySelector("#mail").value= ""
+        document.querySelector("#password").value=""
+        document.querySelector("#confirmpass").value= ""
+    }
+</script>

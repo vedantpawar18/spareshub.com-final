@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script
+      src="https://kit.fontawesome.com/24c494a6b6.js"
+      crossorigin="anonymous"
+    ></script>
+    <style>
+        #customer {
+            margin-left: 150px;
+            font-size: 20px ;
+            color: #5592d2;
+            margin-bottom: -100px;
+          
+        }
+        #container {
+            box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+            border-top: 5px solid #0088cc;
+            height: 350px;
+            width: 80%;
+            margin: auto;
+            margin-top: 100px ;
+            display: grid;
+            grid-template-columns: repeat(2,1fr);
+            grid-template-rows: auto;
+            gap: 10px;
+          border-radius: 10px;
+        }
+        #container > div {
+            border: none;
+        }
+        #password {
+            border: 1px solid black;
+            height: 50px ;
+            width: 50%;
+            display: flex;
+            justify-content: space-around;
+        }
+        #signin {
+            height: 30px;
+            display: flex;
+            margin-top: 50px;    
+        }
+        #box1 {
+            padding-left: 20px;
+        }
+        .bigp {
+            font-size: 20px;
+            color: #877f83;
+        }
+        p {
+            color: #877f83;
+           
+        }
+        #mail {
+         height: 30px ;
+         width: 50%;
+         outline-color: #8cb3dd;
+         border-radius: 5px;
+         border: 1px solid rgb(187, 183, 183);
+        }
+        #password {
+         height: 30px ;
+         width: 50%;
+         outline-color: #8cb3dd; 
+         border-radius: 5px;
+         border: 1px solid rgb(187, 183, 183);background-color: z;
+        }
+        .redstar {
+          color: red;
+        }
+        #submit {
+            background-color: #0088cc ;
+            padding: 8px;
+            color: white;
+            border: none;
+        }
+        #forgetpass{
+            color: #0088cc;
+        }
+        #required {
+            color: red;
+        }
+        #newcustomer {
+            font-size: 20px;
+        }
+         #createaccount {
+             padding: 10px;
+             background-color: #0088cc;
+             color: white;
+             border: none;
+         }
+         #facebook{
+           background-color: #3b5998;
+           color: white;
+           padding: 8px;
+           border-radius: 5px;
+           border: none;
+         }
+         #google {
+           background-color: #dd4b39;
+           color: aliceblue;
+           padding: 8px;
+           border-radius: 5px;
+           border: none; 
+         }
+         #g {
+             color: aliceblue;
+         }
+         #password1 {
+             display: flex;
+             gap: 30px;
+         }
+         button {
+             padding: 10px;
+             background-color: #0088cc;
+             border: none;
+             color: white;
+         }
+        
+    </style>
+</head>
+<body>
+    <p id="customer">Customer Login</p>
+    <div id="container">
+
+        <div id="box1">
+            <p class="bigp">Registered Customers</p>
+            <p>If you have an account,sign in with your email address.</p>
+          <form action="">
+              <p>Email <span class="redstar">*</span></p>
+              <input id="mail" type="email">
+              <p>Password <span class="redstar">*</span></p>
+              <input id="password" type="Password">
+              <br>
+             <div id="password1">
+                 <div><button type="submit"> Sign In</button></div>
+                 <div id="forgetpass">Forgot Your Password?</div>
+             </div>
+          </form>
+          <p id="required"> *Required Fields</p>
+        </div>
+
+        <div id="box2">
+            <p id="newcustomer">New Customers</p>
+            <p>Creating an account has many benefits: check out faster, keep more than one address, trackI orders and more.</p>
+            <button id="createaccount">Create an Account</button>
+            <div id="signin">
+                <div ><button id="facebook"> <i id="icon" class="fa-brands fa-facebook-square"></i>Sign in With Facebook</button></div>
+                <div><button id="google"><i class="fa-brands fa-google"></i>Sign in With Google</button></div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
+<script>
+    document.querySelector("form").addEventListener("submit", loginFun)
+    var userData= JSON.parse(localStorage.getItem("userCred"))
+    // console.log(userData)
+
+    function loginFun(){
+      event.preventDefault()
+       var enteredEmail = document.querySelector("#mail").value 
+       var enteredPass = document.querySelector("#password").value
+    //    console.log(enteredEmail)
+    for(var i=0; i<userData.length; i++){
+        console.log(userData[i])
+        if(userData[i].email===enteredEmail &&
+        userData[i].password===enteredPass){
+            window.location.href = "contactUs.html"
+            alert("login success")
+            break;
+        }
+        else {
+            alert("login failed")
+        }
+    }
+    }
+</script>
