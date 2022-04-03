@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        
+        *{font-family: "Open Sans";}
+        
+        h1{text-align: center;
+        color: #0088cc;
+        font-size: 25px; font-style: normal; font-variant: normal; font-weight: 700; line-height: 28px;
+    }
+    h2{font-size: 25px; font-style: normal; font-variant: normal; font-weight: 700; line-height: 28px;
+            color: #777777;
+        margin-top: 1px;}
+        #box1{
+            /* border: purple solid; */
+            width:75%;
+            height: 1400px;
+            margin: auto;
+            display:flex;
+            
+        }
+        
+        #box2{
+            /* border:black solid; */
+            text-align: center;
+        }
+        #p1{
+            padding-left: 15px;
+            margin-top: -8px;
+        }
+        #box3{
+            width:100%;
+            /* border: green solid; */
+            padding-left: 50px;
+            font-size: 13px; font-style: normal; font-variant: normal; font-weight: 400; line-height: 26px;
+            color: #777777;
+        }
+        #box3>p:nth-child(1),#box3>p:nth-child(5){
+            font-size: 25px; font-style: normal; font-variant: normal; font-weight: 300; line-height: 28px;
+            color: #777777;
+        }
+        #para{
+            font-size: 13px; font-style: normal; font-variant: normal; font-weight: 400; line-height: 18px;
+            color: #777777;
+        }
+        #box4{
+            width:30%;
+            /* border: grey solid; */
+            display: grid;
+            grid-template-columns: repeat(1,1fr);
+            grid-template-rows: 230px auto auto auto auto auto auto;
+            gap:10px;
+                    }
+        #box4>div{
+            
+            background-color: #f0f0ed;
+            padding:25px 5px 5px 20px;
+        }
+        img{transform:scale(1.12, 1.12);
+        }
+        @media only screen and (min-width: 421px) and (max-width: 780px) {
+            #box1{
+                height:2400px;
+           flex-direction: column;
+           }  
+           #box4 div{
+            height: 350px;  width: 450px; 
+            margin-left: 50px;
+            }
+           img{transform:scale(2.2, 2.2);
+            margin: 80px 10px 10px 100px;
+        }
+        @media only screen and (min-width: 70px) and (max-width: 420px) {
+            #box1{
+           flex-direction: column;
+           }  
+           
+        }
+        
+    </style>
+</head>
+<body>
+    <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Open+Sans" />
+    <h1>About Us</h1>
+    <div id="box1">
+        
+        
+        <div id="box4"><div>
+            <h2>Testimonials</h2>
+            <br>
+            <p id="para"><b>Meenakshi Shinde</b></p>
+            <p id="para">I purchased a clutch set for my Volkswagen Vento from your website. I was happy with the parts and the service. Thanks SparesHub.</p>
+        </div></div>
+        <div id="box3">
+                
+                <p>What is SparesHub.com?</p>
+                <br>
+                <p id="p1">How many times has it happened with you that the car spare parts you are looking for is not available in the local spare part market? Or that replacement parts that your garage mechanic has asked you to get and you cannot find it? This is why we brought you SparesHub.com, <b>your one stop shop for buying all the car spare parts and accessories. We bring the best aftermarket spare parts to you from reputed brands like Bosch, Monroe, LUK, INA, Talbros, Lumax, Delphi, Valeo, Minda etc.</b></p>
+                <br>
+                <p>What do we offer?</p>
+                <br>
+                <p id="p1">We have taken care to bring you the <b>widest collection of spare parts and accessories for your car on our online marketplace </b>. We offer Head-lights, Tail-lights, Side Indicators, Rear view mirrors, Side mirrors, Crank shafts, Wipers, Clutch Plates, Pressure Plates, Bearings, Flywheel, Timing belts, Ball joints, Valves, Suspensions, Struts, Bush kits, Electric alternators, Starter motors, Electric relays, Pistons, Oil Filter, Petrol Filter, Air Filter, Diesel Filter, Ignition Coil, Glow plugs, Wiper arms, Ball joint, Clutch cable, Brake cable, Oil Pump, Engine parts, Drivetrain, Dicky shockers, Cyclinder head, Spark plugs, Transmission set, Cam shaft, Carburettor, Sensors, Accelerator cable etc.</p>
+                <p id="p1">Trust SparesHub.com to offer the <b>best and highest variety of automobiles spare parts</b>. So whether your car is a Maruti, Hyundai, Tata, Mahindra, Skoda, Volkswagen, Honda, Fiat or any other, we will provide the best spare parts for your car.</p>
+            
+        </div>
+        
+
+    </div>
+</body>
+</html>
+<script>
+    t=["https://spareshub.com/pub/media/wysiwyg/xaboutsidebarimg1.png.pagespeed.ic.NTvUpzBAxC.webp","https://spareshub.com/pub/media/wysiwyg/xaboutsidebarimg2.png.pagespeed.ic.fRsdANCldt.webp","https://spareshub.com/pub/media/wysiwyg/xaboutsidebarimg3.png.pagespeed.ic.l8aNncE2oL.webp","https://spareshub.com/pub/media/wysiwyg/xaboutsidebarimg4.png.pagespeed.ic.HUnspQyndn.webp","https://spareshub.com/pub/media/wysiwyg/xaboutsidebarimg5.png.pagespeed.ic.2tztJOZGCS.webp"];
+    for(i=0;i<t.length;++i)
+{    z1=document.createElement("div");
+    z2=document.createElement("img");
+    z2.src=t[i];
+    z2.alt="";
+    z1.append(z2);
+    document.querySelector("#box4").append(z1);
+}
+</script>
